@@ -210,6 +210,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css_Templet\layout.css" />
+    <Content Include="Content\css_Templet\reset.css" />
+    <Content Include="Content\css_Templet\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -229,10 +232,20 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js_Templet\cufon-replace.js" />
+    <Content Include="Scripts\js_Templet\cufon-yui.js" />
+    <Content Include="Scripts\js_Templet\html5.js" />
+    <Content Include="Scripts\js_Templet\ie6_script_other.js" />
+    <Content Include="Scripts\js_Templet\jquery-1.4.2.js" />
+    <Content Include="Scripts\js_Templet\Myriad_Pro_400.font.js" />
+    <Content Include="Scripts\js_Templet\Myriad_Pro_italic_400.font.js" />
+    <Content Include="Scripts\js_Templet\Myriad_Pro_italic_600.font.js" />
+    <Content Include="Scripts\js_Templet\PIE.htc" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\index_Templet.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -267,13 +280,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Blog\" />
     <Folder Include="Controllers\DatPhong\" />
+    <Folder Include="Controllers\KhachSan\" />
     <Folder Include="Controllers\QuanTri\" />
     <Folder Include="Controllers\TrangChu\" />
+    <Folder Include="HinhAnh\images\" />
+    <Folder Include="Scripts\js_Templet\ie6_warning\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
