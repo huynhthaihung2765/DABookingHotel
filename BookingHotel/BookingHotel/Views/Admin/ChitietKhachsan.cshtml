@@ -1,0 +1,66 @@
+﻿@model BookingHotel.Models.KhachSan
+
+@{
+    ViewBag.Title = "ChitietKhachsan";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Khách sạn: @Html.DisplayFor(model => model.TenKhachSan)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Địa điểm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaDiem.TenDiaDiem)
+        </dd>
+
+        <dt>
+            Tên Khách sạn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhachSan)
+        </dd>
+
+        <dt>
+            Địa chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Thông tin
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTin)
+        </dd>
+
+        <dt>
+            Link Video
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Video)
+        </dd>
+
+        <dt>
+            Ảnh bài
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhBia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKhachSan }) |
+    @Html.ActionLink("Back to List", "Khachsan")
+</p>

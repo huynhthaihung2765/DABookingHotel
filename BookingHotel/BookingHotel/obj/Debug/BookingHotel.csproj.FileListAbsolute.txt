@@ -159,6 +159,9 @@ D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\Microsoft.Owin.Security.OAut
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\Microsoft.Owin.Security.Google.xml
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Git-DABookingHotel\BookingHotel\BookingHotel\obj\Debug\BookingHotel.csprojResolveAssemblyReference.cache
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\obj\Debug\BookingHotel.dll
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\obj\Debug\BookingHotel.pdb
+D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.dll
+D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.Mvc.dll
+D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.xml
+D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.Mvc.xml

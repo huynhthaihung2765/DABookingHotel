@@ -1,0 +1,73 @@
+﻿@model BookingHotel.Models.KhachSan
+
+@{
+    ViewBag.Title = "XoaKhachsan";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>XoaKhachsan</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>KhachSan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Địa điểm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaDiem.TenDiaDiem)
+        </dd>
+
+        <dt>
+            Tên Khách sạn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhachSan)
+        </dd>
+
+        <dt>
+            Địa chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            Thông tin:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTin)
+        </dd>
+
+        <dt>
+            Link Video:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Video)
+        </dd>
+
+        <dt>
+            Ảnh bìa:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhBia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Khachsan")
+        </div>
+    }
+</div>
