@@ -1,0 +1,70 @@
+#tabs li {
+	display: block;
+	height: 17px;
+	width: 91px;
+	margin-bottom: 5px;
+}
+#tabs a {
+	display: block;
+	text-decoration: none;
+	font-size: 10px;
+	height: 15px;
+	padding-top: 2px;
+	padding-left: 3px;
+	width:82px;
+}
+#tabs a:hover {
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	width: 88px;
+	font-size: 10px;
+	height: 15px;
+	padding-top: 2px;
+	padding-left: 3px;
+}
+#tabs {
+}
+#tabs ul {
+	display: block;
+	width: 90px;
+	float: left;
+}
+
+
+.ui-tabs .ui-tabs-nav { list-style: none; position: relative; padding: .2em .2em 0; }
+.ui-tabs .ui-tabs-nav li {
+	position: relative;
+	border-bottom-width: 0 !important;
+	margin: 0;
+	padding: 0;
+}
+.ui-tabs .ui-tabs-nav li a {
+	text-decoration: none;
+	background: url(../images/vert_tabnormal.gif) repeat-x;
+	
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	color: #FFFFFF;
+	border-width: 0;
+	background: url(../images/vert_tabactive.gif) no-repeat;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+	background: url(../images/vert_tabactive.gif) repeat-x;
+	color: #FFFFFF;
+}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+	cursor: pointer;
+	color:#fff;
+} /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel { padding: 1em 1.4em; display: block; border-width: 0; background: none; }
+.ui-tabs .ui-tabs-hide { display: none !important; }
+#tabs .hiddentab {
+	margin-left: 95px;
+	height: 77px;
+	background: url(../images/action_shadows.gif) no-repeat;
+	padding-left: 15px;
+}
+#wrap #content #main .newClass {
+	display: none;
+}

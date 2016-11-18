@@ -1,0 +1,83 @@
+﻿@model IEnumerable<HungProjects.Models.KhachSan>
+
+@{
+    ViewBag.Title = "KhachSanTheoDiaDiem";
+    Layout = "~/Views/Layout/LayoutNguoiDung.cshtml";
+}
+
+<h2>KhachSanTheoDiaDiem</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@foreach (var item in Model)
+{
+    <ul class="listing">
+        <li>
+            <div class="listinfo">
+                <img src="~/Hinhanh/Khachsan/@Html.DisplayFor(modelItem => item.AnhBia)" alt="" class="listingimage" />
+                <h3>@Html.DisplayFor(modelItem => item.TenKhachSan)</h3>
+                <p>@Html.DisplayFor(modelItem => item.DiaChi)</p>
+                <span class="price">@Html.DisplayFor(modelItem => item.ThongTin)</span>
+                <span class="media">
+                    <img src="images/icon_img.jpg" alt="" width="19" height="15" /> 12 Images
+                    <img src="images/videos_icon.jpg" alt="" width="21" height="18" />
+                </span> 1 Video
+            </div>
+            <div class="listingbtns"> <span class="listbuttons"> <a href="#">Chi tiết</a></span></div>
+            <div class="clear">&nbsp;</div>
+        </li>
+    </ul>
+}
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaDiaDiem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenKhachSan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThongTin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Video)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnhBia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDiaDiem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenKhachSan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThongTin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Video)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnhBia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaKhachSan }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaKhachSan }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaKhachSan })
+        </td>
+    </tr>
+}
+
+</table>*@

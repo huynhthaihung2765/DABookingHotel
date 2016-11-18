@@ -1,0 +1,56 @@
+﻿@model IEnumerable<HungProjects.Models.ChiTiet_LoaiPhong>
+ 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKhachSan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLoaiPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongToiDa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhuyenMai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKhachSan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLoaiPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongToiDa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HinhAnh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhuyenMai)
+        </td>
+        
+    </tr>
+}
+
+</table>
