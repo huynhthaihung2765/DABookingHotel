@@ -399,6 +399,29 @@
         <!-- /#page-wrapper -->
 
     </div>
+    <div id="menu">
+        <ul>
+            <li>
+                @Html.ActionLink("Khách sạn", "Index", "Admin")
+            </li>
+            <li>
+                @Html.ActionLink("Chính sách", "Sanpham", "Admin")
+            </li>
+            <li>
+                <a href="#">Loại phòng</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Tiên ích</a></li>
+                    <li><a href="#">Dịch vụ</a></li>
+                    <li>
+                        <a href="#">Đánh giá</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                @Html.ActionLink("Hình ảnh", "Donhang", "Admin")
+            </li>
+        </ul>
+    </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
     <script src="~/sbAdminPage/vendor/jquery/jquery.min.js"></script>

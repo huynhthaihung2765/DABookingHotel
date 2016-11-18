@@ -53,8 +53,8 @@ else
                                 <img src="@Url.Content("~/Hinhanh/Khachsan/" + item.AnhBia)" width="70" />
                             </td>
                             <td width="10%">
-                                @Html.ActionLink("Sửa", "ChitietKhachsan", new { id = item.MaKhachSan })<br />
-                                @Html.ActionLink("Chi tiết", "SuaKhachsan", new { id = item.MaKhachSan })<br />
+                                @Html.ActionLink("Sửa", "SuaKhachsan", new { id = item.MaKhachSan })<br />
+                                @Html.ActionLink("Chi tiết", "ChitietKhachsan", new { id = item.MaKhachSan })<br />
                                 @Html.ActionLink("Xoá", "XoaKhachsan", new { id = item.MaKhachSan })
                             </td>
                         </tr>
@@ -65,7 +65,7 @@ else
                 <!-- /.table-responsive -->
                 <div class="well">
                     <h4></h4>                   
-                    <a class="btn btn-default btn-lg btn-block" target="_blank" href="~/Admin/ThemKhachsan.cshtml">Tạo khách sạn mới</a>
+                    <a class="btn btn-default btn-lg btn-block" target="_blank" href="~/Admin/ThemKhachsan">Tạo khách sạn mới</a>
                 </div>
             </div>
             <!-- /.panel-body -->

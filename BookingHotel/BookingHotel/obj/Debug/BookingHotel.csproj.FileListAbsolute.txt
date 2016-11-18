@@ -165,3 +165,4 @@ D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.dll
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.Mvc.dll
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.xml
 D:\Git-DABookingHotel\BookingHotel\BookingHotel\bin\PagedList.Mvc.xml
+D:\Git-DABookingHotel\BookingHotel\BookingHotel\obj\Debug\BookingHotel.csprojResolveAssemblyReference.cache

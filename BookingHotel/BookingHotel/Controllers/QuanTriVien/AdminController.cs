@@ -131,7 +131,7 @@ namespace BookingHotel.Controllers.QuanTriVien
             }
             return View(ksan);
         }
-        [HttpPost, ActionName("Xoasach")]
+        [HttpPost, ActionName("XoaKhachsan")]
         public ActionResult Xacnhanxoa(int id)
         {
             // lấy ra đối tượng sách cần xoa theo mã
@@ -146,9 +146,56 @@ namespace BookingHotel.Controllers.QuanTriVien
             db.SubmitChanges();
             return RedirectToAction("Khachsan");
         }
-        public ActionResult Loaiphong()
+        [HttpGet]
+        public ActionResult SuaKhachsan(int id)
         {
-            return View();
+            // lấy ra đối tượng sách cần xoa theo mã
+            KhachSan ksan = db.KhachSans.SingleOrDefault(model => model.MaKhachSan == id);
+            ViewBag.MaKhachSan = ksan.MaKhachSan;
+            if (ksan == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            //Dua du lieu vao dropdownList
+            //Lay ds tu tabke chu de, sắp xep tang dan trheo ten chu de, chon lay gia tri Ma CD, hien thi thi Tenchude
+            ViewBag.MaDiaDiem = new SelectList(db.DiaDiems.ToList().OrderBy(n => n.TenDiaDiem), "MaDiaDiem", "TenDiaDiem", ksan.MaDiaDiem);
+            return View(ksan);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult SuaKhachsan(KhachSan ksan, HttpPostedFileBase fileUpload, FormCollection collection, int id)
+        {
+            ViewBag.MaDiaDiem = new SelectList(db.DiaDiems.ToList().OrderBy(n => n.TenDiaDiem), "MaDiaDiem", "TenDiaDiem", ksan.MaDiaDiem);
+            KhachSan ks = db.KhachSans.Where(m => m.MaKhachSan == ksan.MaKhachSan).FirstOrDefault();
+            string tenkhachsan = collection["TenKhachSan"];
+            var diachi = collection["DiaChi"];
+            var thongtin = collection["ThongTin"];
+            string video = collection["Video"];
+            if (String.IsNullOrEmpty(tenkhachsan))
+            {
+                ViewData["Loi"] = "Tên ko để trống";
+            }
+            else
+            {
+                ks.TenKhachSan = tenkhachsan;
+                ks.DiaChi = diachi;
+                ks.ThongTin = thongtin;
+                ks.Video = video;
+                //Luu vao CSDL   
+                UpdateModel(ksan);
+                db.SubmitChanges();
+                //kiểm tra đường dẫn file
+                return RedirectToAction("Khachsan");
+            }
+            return this.SuaKhachsan(id);
+
+        }
+        [HttpGet]
+        public ActionResult ThemChinhsach(KhachSan ksan)
+        {
+            ViewBag.MaKhachSan = new SelectList(db.KhachSans.ToList().OrderBy(n => n.TenKhachSan), "MaKhachSan", "TenKhachSan", ksan.MaKhachSan);
+            return PartialView();
         }
     }
 }
