@@ -1,0 +1,28 @@
+@charset "utf-8";
+.search_form td {
+	padding: 5px 3px 3px;
+}
+.search_form .text {
+	display: block;
+	border: 1px solid #4F8B9D;
+	padding: 2px;
+}
+.search_form .select_field {
+	padding: 2px;
+	display: block;
+	border: 1px solid #4F8B9D;
+}
+.search_form .smalltextarea {
+	width: 45px;
+}
+.search_form .mediumtext {
+	width: 75px;
+}
+.search_form .longfield {
+	width: 420px;
+}
+#tabs.text {
+	border: 1px solid #666666!important;
+	margin-bottom: 5px!important;
+	display: block;
+}

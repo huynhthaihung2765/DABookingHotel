@@ -1,0 +1,19 @@
+﻿@using HungProjects.Models
+@model List<DiaDiem>
+
+<div class="wrapper pad_bot1"> 
+    <p>Danh sách Địa chỉ khách sạn.</p>
+    @using (Html.BeginForm("KhachSanTheoDiaDiem", "TrangChu"))
+    {
+        <div class="radio">
+            @foreach (var item in Model)
+            {
+                <input type="radio" name="madiadiem" value="@item.MaDiaDiem"> @item.TenDiaDiem <br />
+            }
+        </div>
+        <div>
+            <button class="button" type="submit">Tìm</button>
+        </div>
+    }
+    
+</div>

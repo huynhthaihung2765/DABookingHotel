@@ -1,0 +1,37 @@
+﻿@model HungProjects.Models.KhachSan
+
+@{
+    ViewBag.Title = "ChitietKhachsan";
+    Layout = "~/Views/Layout/LayoutNguoiDung.cshtml";
+}
+
+<h2>ChitietKhachsan</h2>
+<div id="main">
+    <h1>Chỗ này điền j đó....</h1>
+
+    <!--Hiển thi thông tin chi tiết khách sạn được chọn-->
+    <div id="single_item_details">
+        <div id="leftcolumn"><img src="~/Hinhanh/Khachsan/@Model.AnhBia" alt="" width="220" height="220" class="previewimg" /> </div>
+        <div id="rightcolumn">
+            <h2>@Model.TenKhachSan</h2>
+            <p class="user"><img src="" alt="" /> Địa chỉ:<a href="#"> @Model.DiaChi</a></p> 
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+    
+    
+    <div id="midraw_details">
+        <div class="listingbtns"> <span class="listbuttons"> <a href="#">Make An Offer</a></span> <span class="listbuttons"> <a href="#">Request Details</a></span> <span class="listbuttons"> <a href="#">Contact Seller</a></span></div>
+        <div id="imagesgallerylisting">
+            <div class="imagegallink"><a href="#">view Image Gallery</a> <span>12 Images Submitted</span></div>
+        </div>
+        <div class="clear">&nbsp;</div>
+    </div>
+
+    <!--Hiển thị chính sách của khách sạn đó.-->
+    @Html.Action("Chinhsach", "TrangChu", new { id = @Model.MaKhachSan })
+ 
+    <p>&nbsp;</p>
+    <h1>[Partial View] Danh sách loại phòng trong khách sạn</h1>
+    @Html.Action("DanhsachPhongKS", "TrangChu", new { id = @Model.MaKhachSan })
+</div>
